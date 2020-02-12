@@ -11,3 +11,5 @@ Edit the firewall URL and API key varibles as appropriate
 * get_license_status.py - a comprehensive list of licensing info
 
 * get_rate_based_sigs.py - retrieve a list of rate-based IPS signatures and their thresholds
+
+* fortigate_backup.py - back up the Fortigate config to a file
