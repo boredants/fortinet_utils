@@ -15,3 +15,5 @@ Edit the firewall URL and API key varibles as appropriate
 * fortigate_backup.py - back up the Fortigate config to a file
 
 * get_active_routes.py - get a list of active IP routes from a Fortigate
+
+* get_ssl_vpn_connections.py - get a list of currently connected ssl vpn tunnels
