@@ -43,10 +43,14 @@ def get_ssl_vpn():
             print("{0:14} : {1}".format("USERNAME", i['user_name']))
             print("{0:14} : {1}".format("LOGIN TIME", i['last_login_time']))
             print("{0} : {1}".format("REMOTE ADDRESS", i['remote_host']))
-            print("{0} : {1}".format("TUNNEL ADDRESS", i['subsessions'][0]['aip']))
             print("{0:14} : {1}".format("TIMESTAMP", i['last_login_timestamp']))
-            print("{0:14} : {1}".format("BYTES IN", i['subsessions'][0]['in_bytes']))
-            print("{0:14} : {1}\n".format("BYTES OUT", i['subsessions'][0]['out_bytes']))
-         
+            if not i['subsessions']:
+                print()
+            else:
+                print("{0} : {1}".format("TUNNEL ADDRESS", i['subsessions'][0]['aip']))
+                print("{0:14} : {1}".format("BYTES IN", i['subsessions'][0]['in_bytes']))
+                print("{0:14} : {1}\n".format("BYTES OUT", i['subsessions'][0]['out_bytes']))
+  
+
 if __name__ == '__main__':
     main()
